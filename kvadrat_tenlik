@@ -2,13 +2,13 @@
 #include<math.h>
 using namespace std;
 int main (){
-   int a=1,b,c,diskriminant,x1,x2;
+   int a,b,c,diskriminant,x1,x2;
 	
      cout<<"ax^2+bx+c=0 tenliyine uygun a ,b ve c emsallarini daxil edin? " ;
      cin>>a>>b>>c;
  
     	// a sifir olsa kvadrat tenlik olmur . Ona gore a sifir olanda 
- 	    // tenliyin yeniden daxilmesini isteyirik 
+ 	// tenliyin yeniden daxilmesini isteyirik 
 	 while (a==0)  
  	{ cout<<"a 0-dan ferqli olmalidir.Tenliyi tekrar daxil edin "<<endl;
 	  
@@ -21,14 +21,14 @@ int main (){
  	    {
 	         cout<<"Bu tenliyin koku yoxdur";
       	}
-   	 if (diskriminant==0)
-   	    {
-		     x1 = (b*(-1)- sqrt(diskriminant))/2*a;
-		     cout<<"Tenliyin iki beraber koku var o da : "<<x1;
+        if (diskriminant==0)
+        {
+          x1 = (b*(-1)- sqrt(diskriminant))/2*a;
+          cout<<"Tenliyin iki beraber koku var o da : "<<x1;
     	}
-    if (diskriminant>0)
+        if (diskriminant>0)
         {    x1 = (b*(-1)- sqrt(diskriminant))/2*a;
-            x2 = (b*(-1)+sqrt(diskriminant))/2*a;
+             x2 = (b*(-1)+sqrt(diskriminant))/2*a;
          cout<< "tenliyin iki  muxtelif koku var"<<x1<<" ve "<<x2;
      	}
 
