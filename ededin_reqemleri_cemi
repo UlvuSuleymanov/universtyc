@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main (){
+	int givenNumber,sum=0,lastNum;
+	
+	// givenNumber - verilen eded
+	// sum - cem
+	
+ 	cin>>givenNumber; 
+
+    	while (givenNumber>0)
+    	{   
+	      lastNum=givenNumber%10;
+	     sum=sum+lastNum;
+	     givenNumber=givenNumber/10;
+     	}
+ 	 
+     cout<<"Verilen ededin reqemleri cemi:"<<sum;
+}
