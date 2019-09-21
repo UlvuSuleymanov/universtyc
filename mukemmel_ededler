@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int main (){
+
+  for( int j=1;j<100000000;j++)
+  {  int bolenlerCemi=0;
+  
+   for(int i =1;i<j;i++)
+   {
+   	if (j%i==0)
+   	{
+   		bolenlerCemi=bolenlerCemi+i;
+	 }
+   	
+   	
+   	
+   }
+   if(bolenlerCemi==j)
+   {
+   cout<<j<<endl;
+   }
+}
+	
+
+}
