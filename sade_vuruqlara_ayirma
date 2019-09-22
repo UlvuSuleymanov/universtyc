@@ -7,13 +7,13 @@ int main (){
    int i=2;
   while(n>0)
   {  if(n%i==0)
-      { cout<<i<<endl;
+       { cout<<i<<endl;
         n=n/i;
-	  }
-	 else
-	 {
-	 	i++;
-	 }
+      }
+    else
+      {
+        i++;
+      }
   	
   }
 	
