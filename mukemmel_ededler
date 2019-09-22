@@ -2,20 +2,23 @@
 
 using namespace std;
 int main (){
+// mukemmel eded - bolenlerinin (ozunden basqa) cemi ozune beraber olan ededler 
 
   for( int j=1;j<100000000;j++)
   {  int bolenlerCemi=0;
-  
+   
    for(int i =1;i<j;i++)
-   {
+   {   
+       //   J-ni tam bolen i ededlerinin cemini tapiriqe
    	if (j%i==0)
    	{
    		bolenlerCemi=bolenlerCemi+i;
-	 }
+	}
    	
    	
    	
    }
+   // eger bolenlerin cemi ozune beraberdirse  bu ededi ekrana cixaririq
    if(bolenlerCemi==j)
    {
    cout<<j<<endl;
