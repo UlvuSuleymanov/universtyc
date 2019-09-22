@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main (){
+	cout<<"a ve b ededlerini daxil edin";
+	int a,b,ebob,ekob;
+
+	cin>>a>>b;
+	
+	for(int i=2;true;i++)
+	{ if(a%i==0 && b%i==0)
+	    { 
+      ebob = i;
+	    }
+	  if(i%a==0&&i%b==0)
+	    {ekob=i;
+	    break;
+	    }
+	}
+	if(ebob==0)
+	{ cout<<"Bu ededler qarsiliqli sade ededlerdir.";
+	}
+	else{
+		cout<<"ebob="<<ebob<<endl;
+	}
+	cout<<"ekob="<<ekob;
+
+}
