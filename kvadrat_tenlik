@@ -1,36 +1,42 @@
+
 #include <iostream>
 #include<math.h>
 using namespace std;
-int main (){
-   int a,b,c,diskriminant,x1,x2;
-	
-     cout<<"ax^2+bx+c=0 tenliyine uygun a ,b ve c emsallarini daxil edin? " ;
-     cin>>a>>b>>c;
- 
-    	// a sifir olsa kvadrat tenlik olmur . Ona gore a sifir olanda 
- 	// tenliyin yeniden daxilmesini isteyirik 
-	 while (a==0)  
- 	{ cout<<"a 0-dan ferqli olmalidir.Tenliyi tekrar daxil edin "<<endl;
-	  
- 		cin>>a>>b>>c;
-	}
- 	
- 	 diskriminant = b*b-4*a*c;
- 	
- 	 if (diskriminant<0)
- 	    {
-	         cout<<"Bu tenliyin koku yoxdur";
-      	}
-        if (diskriminant==0)
-        {
-          x1 = (b*(-1)- sqrt(diskriminant))/2*a;
-          cout<<"Tenliyin iki beraber koku var o da : "<<x1;
-    	}
-        if (diskriminant>0)
-        {    x1 = (b*(-1)- sqrt(diskriminant))/2*a;
-             x2 = (b*(-1)+sqrt(diskriminant))/2*a;
-         cout<< "tenliyin iki  muxtelif koku var"<<x1<<" ve "<<x2;
-     	}
+int main () {
+	int a,b,c,diskriminant,x1,x2;
+    // tenliyi hell etmek ucun bize ancaq a b c ededleri lazimdir.
+	cout<<"ax^2+bx+c=0 tenliyine uygun a ,b ve c emsallarini daxil edin? " ;
+	cin>>a>>b>>c;
 
-   
+	// a sifir olsa kvadrat tenlik olmur . Ona gore a sifir olanda
+	// tenliyin yeniden daxilmesini isteyirik
+	// meselen:  birinci defede a-ni sifir yazsan while'deki a==0 serti duz olacaq
+	// ona gore yeniden a b c ededlerini daxil etmeyini isteyecek
+	//  yox eger a sifirdan ferqli olsa a==0 serti duzgun olmayacaq ve proqram
+	//  while'den cixaraq diskriminanti ve novbeti emeliyyatlari  icra edecek
+
+	while (a==0) {
+		cout<<"a 0-dan ferqli olmalidir.Tenliyi tekrar daxil edin "<<endl;
+
+		cin>>a>>b>>c;
+	}
+
+	diskriminant = b*b-4*a*c;
+	// diskriminant sifirdan kicik olanda tenliyin heqiqi koku olmur
+	if (diskriminant<0) {
+		cout<<"Bu tenliyin heqiqi koku yoxdur";
+	}
+	// diskriminant sifir olanda tenliyin iki beraber koku olur
+	if (diskriminant==0) {
+		x1 = (b*(-1)- sqrt(diskriminant))/2*a;
+		cout<<"Tenliyin iki beraber koku var o da : "<<x1;
+	}
+	// diskriminant sifirdan boyuk olanda da iki ferqli x1 ve x2 koku olur
+	if (diskriminant>0) {
+		x1 = (b*(-1)- sqrt(diskriminant))/2*a;
+		x2 = (b*(-1)+sqrt(diskriminant))/2*a;
+		cout<< "tenliyin iki  muxtelif koku var "<<x1<<" ve "<<x2;
+	}
+
+	return 0;
 }
