@@ -1,21 +1,31 @@
 #include <iostream>
 using namespace std;
-int main (){
+int main () {
 	int countFibonacciNum;
-	int sum=0,num1=0,num2=1;
-	
-    cout<<"Nece fibonacci ededi gosterilsin? " ;
- 	cin>>countFibonacciNum ; 
+	// fibanocci ededleri :  0 1 1 2 3 5 8 13 21 ve s.
+	// her eded ozunden evvelki iki fibanocci ededinin cemine beraberdir .
 
-    for(int i =0;i<countFibonacciNum;i++)
-    {   
-    	sum=num1+num2;
-    	num1=num2;
-    	num2=sum;
-     cout<<"eded "<<i+1<<" :  "<<sum<<endl;
-    	
-    	
+	int sum=0,num1=0,num2=1;
+
+	cout<<"Nece fibonacci ededi gosterilsin? " ;
+	cin>>countFibonacciNum ;
+	// baslangic olaraq num1=0 ve num2=1 reqemlerini gotururem
+	//  ucuncu ededi tapmaq ucun evvelce birinci  ve ikinci ededler toplanir
+
+	for(int i =0; i<countFibonacciNum; i++) {
+		//  ekranda eded 0 dan yox eded 1 den baslasin deye i+1 yazmisam (bu i+1 dovrdeki i-ni deyismir)
+		cout<<"eded "<<i+1<<" :  "<<sum<<endl;
+		// evvelce novbeti fibanocci ededi tapilir
+		sum=num1+num2;
+		// bundan sonra gelen fibanocci ededini tapmaq ucun bize yene num ve num2 lazim olacaq
+		// ona gore num1-i bu fibanocci ededinden evvelki  , num2-ni ise bu fibanocci ededine beraber edirem
+		//  ve belelikle num1 ve num2 bundan sonraki fibanocci ededinden evvel gelen 2 fibanocci ededi olur
+
+		num1=num2;
+
+		num2=sum;
+
 	}
- 	 
-     return 0;
+
+	return 0;
 }
