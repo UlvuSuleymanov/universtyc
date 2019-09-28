@@ -1,27 +1,53 @@
 #include <iostream>
 using namespace std;
-int main (){
+int main () {   
 	cout<<"a ve b ededlerini daxil edin";
-	int a,b,ebob,ekob;
+	int a,b,ebob,ekob,boyukEded,kicikEded;
 
-	cin>>a>>b;
+
+	// a ve b ededlerden boyuyunu ve kiciyin tapiram
+	// boyuk ededi boyukEded, kicik ededi ise kicikEded deyisenine menimsedirem
+
+
+	cin>>a>>b;  // a ve b ni daxil edirem :d
+	if(a>b) {
+		boyukEded=a;
+		kicikEded=b;
+
+	} else {
+		boyukEded=b;
+		kicikEded=a;
+	}
+
+	// ebobun tapilmasi
+	// Ebob kicik ededden boyuk ola bilmez , ona gore de  i kicik edede qeder artir
+
+	for(int i=1; i<= kicikEded ; i++) {
+		// eger a ve b ededleri her ikisi i -ye tam bolunurse ebobu i dir.
+		if(a%i==0 && b%i==0) {
+			ebob = i;
+		}
+
+	}
+	// ededin ekobu onlarin hasillerinin ebob'una nisbetine beraberdir
+	// it iz riyaziyyat :D 
+	ekob=a*b/ebob;
+
+	// eger ebob 1'se demeli bunlar qarsiliqli sade ededdir ,
+	//  qarsiliqli sade ededlerin ebobu hemise 1 oldugu ucun onu ekranda gostermirem
 	
-	for(int i=2;true;i++)
-	{ if(a%i==0 && b%i==0)
-	    { 
-      ebob = i;
-	    }
-	  if(i%a==0&&i%b==0)
-	    {ekob=i;
-	    break;
-	    }
-	}
-	if(ebob==0)
-	{ cout<<"Bu ededler qarsiliqli sade ededlerdir.";
-	}
-	else{
+
+	if(ebob==1)
+	{
+		cout<<"Bu ededler qarsiliqli sade ededlerdir";
+	} else {
+	 // eger ebob bir deyilse onu ekranda gosterirem	
 		cout<<"ebob="<<ebob<<endl;
 	}
+
+	// ekobu hemise ekranda gosterirem
 	cout<<"ekob="<<ekob;
+  
+   return 0;
 
 }
