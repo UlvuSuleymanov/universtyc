@@ -17,7 +17,7 @@ int main () {
 		cout<<"eded "<<i+1<<" :  "<<sum<<endl;
 		// evvelce novbeti fibanocci ededi tapilir
 		sum=num1+num2;
-		// bundan sonra gelen fibanocci ededini tapmaq ucun bize yene num ve num2 lazim olacaq
+		// bundan sonra gelen fibanocci ededini tapmaq ucun bize yene num1 ve num2 lazim olacaq
 		// ona gore num1-i bu fibanocci ededinden evvelki  , num2-ni ise bu fibanocci ededine beraber edirem
 		//  ve belelikle num1 ve num2 bundan sonraki fibanocci ededinden evvel gelen 2 fibanocci ededi olur
 
