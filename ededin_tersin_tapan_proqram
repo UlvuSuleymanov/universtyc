@@ -1,0 +1,29 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// a ve onun tersi olacaq tersA deyisenlerini tanimlayiram
+     int a,tersA=0;
+	  a=int.Parse(Console.ReadLine());
+    // a ededini sondan baslayaraq reqemlere ayiriram
+    // her dovrda tersA deyisenini 10 a vurub ,ededin reqemi ile toplayiram(sondan baslayaraq)
+    // meselen 1584 ededi ucun bu kod bele isleyecek:
+    // 1-ci dovr : tersA = 0 dır. tersA*10=0 olar.  tersA=tersA+reqem(4)  1-ci dovrun sonunda tersA=4 olur.
+    // 2-ci dovr : tersA = 4 dur. tersA*10=40 olar.  tersA=tersA+reqem(8)  2-ci dovrun sonunda tersA=48 olur.
+	  // 3-ci dovr : tersA = 48 dur. tersA*10=480 olar.  tersA=tersA+reqem(5)  3-cu dovrun sonunda tersA=485 olur.
+	  // 4-ci dovr : tersA = 485 dur. tersA*10=4850 olar.  tersA=tersA+reqem(1)  4-cu dovrun sonunda tersA=4851 olur.
+	  //4-cu dovrde artiq a deyiseni sifir oldugu ucun while dongusu dayanacaq. ve tersA deyiseni 4851 olaraq ekrana verilecek 
+		
+		
+	 while(a>0)
+	 {
+	 tersA=tersA*10;
+	 int reqem = a%10;
+	 tersA=tersA+reqem;
+     a=a/10;	 
+	 }
+		Console.WriteLine(tersA);
+	}
+}
