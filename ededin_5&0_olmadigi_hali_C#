@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+    int a,tersYeniA=0,yeniA=0;
+	  a=int.Parse(Console.ReadLine());
+    
+	// ededin tersin tapan proqramda oldugu kimi bu proqramda da ededin tersini tapiriq
+	// amma bu defe sert qoyuruq ki  reqem 5 den ve 0 dan ferqli olsun
+	// belelikle birinci while'da 5 ve 0 -i nezere almadan ededin tersin tapiriq (tersYeniA)
+  // meselen:85407 ededi birinci while-nin sonunda 748 olacaq.
+  // ikinci while'de ise 847--yeni 85407 ededinin 5 ve 0 olmayan hali olacaq 
+ 
+
+	// birinci while ))
+	 while(a>0)
+	 {
+      int sonReqem = a%10;
+		 if(sonReqem!=5 && sonReqem!=0)
+		 { tersYeniA=tersYeniA*10;
+		   tersYeniA=tersYeniA+sonReqem;
+     }
+	 	 a=a/10;
+	 }
+   
+   
+  // ikinci while))
+		while(tersYeniA>0)
+		{ int sonuncu=tersYeniA%10;
+		  yeniA =yeniA*10;
+		  yeniA = yeniA+sonuncu;
+		 
+		 tersYeniA=tersYeniA/10;
+		}
+		Console.WriteLine(yeniA);
+
+	}
+}
