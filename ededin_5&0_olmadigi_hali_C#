@@ -11,8 +11,8 @@ public class Program
 	// ededin tersin tapan proqramda oldugu kimi bu proqramda da ededin tersini tapiriq
 	// amma bu defe sert qoyuruq ki  reqem 5 den ve 0 dan ferqli olsun
 	// belelikle birinci while'da 5 ve 0 -i nezere almadan ededin tersin tapiriq (tersYeniA)
-  // meselen:85407 ededi birinci while-nin sonunda 748 olacaq.
-  // ikinci while'de ise 847--yeni 85407 ededinin 5 ve 0 olmayan hali olacaq 
+        // meselen:85407 ededi birinci while-nin sonunda 748 olacaq.
+        // ikinci while'de ise 847--yeni 85407 ededinin 5 ve 0 olmayan hali olacaq 
  
 
 	// birinci while ))
@@ -21,9 +21,9 @@ public class Program
       int sonReqem = a%10;
 		 if(sonReqem!=5 && sonReqem!=0)
 		 { tersYeniA=tersYeniA*10;
-		   tersYeniA=tersYeniA+sonReqem;
-     }
-	 	 a=a/10;
+  		   tersYeniA=tersYeniA+sonReqem;
+                 }
+	   a=a/10;
 	 }
    
    
