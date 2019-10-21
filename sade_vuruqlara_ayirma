@@ -5,7 +5,7 @@ int main (){
    cout<<"n-i daxil edin";
    cin>>n;
    int i=2;
-  while(n>0)
+  while(n!=1)
   {  if(n%i==0)
        { cout<<i<<endl;
         n=n/i;
